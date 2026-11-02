@@ -1,4 +1,6 @@
 <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     $kecamatan = $_POST['kecamatan'];
     $luas = $_POST['luas'];
     $jumlah_penduduk = $_POST['jumlah_penduduk'];
@@ -7,7 +9,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "latihan";
+    $dbname = "latihan8";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -26,4 +28,5 @@
     $conn->close();
 
     header("Location: ../index.php");
+    }
 ?>
